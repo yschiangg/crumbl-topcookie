@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Table from './table';
+import RecSec from './rec';
 
-function App() {
+const TableHeader = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <thead>
+          <tr>
+              <th>
+                  Domain
+              </th>
+              <th>
+                  Count
+              </th>
+              <th>
+                  Category
+              </th>
+          </tr>
+      </thead>
+  )
 }
 
-export default App;
+
+
+const App = () => {
+  const mock = [
+      { domain: "google.com", count: 523, category: "CDN" },
+      { domain: "googletagmanger.com", count: 417, category: "Essential" },
+      { domain: "pixeldust", count: 409, category: "Essential" }
+  ];
+
+  console.log(mock);
+
+  return (<div>
+     <h6>Top Cookie Site</h6>
+      <TableHeader />
+      <tbody>
+          {mock.map(row => 
+              <tr>
+                  <td>{row.domain}</td>
+                  <td>{row.count}</td>
+                  <td>{row.category}</td>
+              </tr>
+          )}
+      </tbody>
+      <RecSec />
+  </div>);
+};
+
+
+
+
+
+export default App
