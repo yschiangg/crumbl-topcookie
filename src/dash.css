@@ -1,0 +1,17 @@
+.mainbody{
+    padding-top: 5rem;
+    padding-left: 20rem;
+    padding-right: 15rem;
+}
+
+.secbody{
+    max-width: 50rem;
+}
+
+.flex-container {
+    display: flex;
+  }
+
+.a  {
+    color:#ccffff;
+  }

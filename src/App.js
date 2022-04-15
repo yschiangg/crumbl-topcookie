@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Table from './table';
 import RecSec from './rec';
 
+
 const TableHeader = () => {
   return (
       <thead>
@@ -31,8 +32,11 @@ const App = () => {
 
   console.log(mock);
 
-  return (<div>
-     <h6>Top Cookie Site</h6>
+  return (<div class="mainbody">
+    <h1>Crumbl dashboard</h1>
+    <h4>How does Crumbl work?</h4>
+    <RecSec />
+    <h4>Top sites for cookie</h4>
       <TableHeader />
       <tbody>
           {mock.map(row => 
@@ -43,7 +47,8 @@ const App = () => {
               </tr>
           )}
       </tbody>
-      <RecSec />
+      <h4>Stale cookies</h4>
+
   </div>);
 };
 
