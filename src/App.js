@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Table from './table';
 import RecSec from './rec';
 
 
